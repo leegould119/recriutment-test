@@ -1,0 +1,153 @@
+.errorMessages {
+  width: calc(100% - 20px);
+  display: block;
+  background-color: #c74244;
+  color: white;
+  // padding: 5px 5px 5px 10px;
+  font-size: 0.8em;
+  margin: -10px 10px 10px 10px;
+  // transition: all 0.2s ease-in-out;
+  span {
+    width: 100%;
+    display: block;
+    padding: 5px 5px 5px 10px;
+  }
+}
+
+.notifications {
+  background-color: $white;
+  width: 300px;
+  padding: 10px;
+  position: fixed;
+  bottom: 10px;
+  left: calc(50% - 150px);
+  display: block;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+  &.info {
+    font-size: 0.8em;
+    background-color: $info-notifications;
+    color: $white;
+  }
+
+  &.warning {
+    font-size: 0.8em;
+    background-color: $warning-notifications;
+    color: $white;
+  }
+  &.success {
+    font-size: 0.8em;
+    background-color: $success-notifications;
+    color: $white;
+  }
+  &.error {
+    font-size: 0.8em;
+    background-color: $danger-notifications;
+    color: $white;
+  }
+  span {
+    width: 100%;
+    display: block;
+    &.header {
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+      font-size: 1em;
+    }
+    &.message {
+      font-family: 'Raleway', sans-serif;
+    }
+  }
+  .close-btn {
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1em;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    cursor: pointer;
+  }
+  .info-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    margin: 10px 20px 10px 10px;
+    background-image: url('../img/info-circle-solid.svg');
+    background-repeat: no-repeat;
+  }
+  .error-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    margin: 10px 20px 10px 10px;
+    background-image: url('../img/exclamation-circle-solid.svg');
+    background-repeat: no-repeat;
+  }
+  .warning-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    margin: 10px 20px 10px 10px;
+    background-image: url('../img/exclamation-triangle-solid.svg');
+    background-repeat: no-repeat;
+  }
+  .success-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    margin: 10px 20px 10px 10px;
+    background-image: url('../img/check-circle-solid.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 10px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
